@@ -1,4 +1,3 @@
-from typing_extensions import Required
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -14,4 +13,4 @@ class Vote(models.Model):
     candidate = models.ForeignKey(Candidate, on_delete=models.CASCADE)
 
     def __str__(self) -> str:
-        return self.user.username + ' ' + self.candidate
+        return self.user.username + ' ' + self.candidate.name
