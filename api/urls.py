@@ -10,4 +10,7 @@ urlpatterns = [
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 
     path('createUser/', views.createUser, name='create-user'),
+    path('votes/', views.requestVotes, name='request-votes'),
+    path('votes/all/', views.requestVotesAll, name='request-votes-all'),
+    path('candidates/', views.requestCandidates, name='request-candidates'),
 ]
